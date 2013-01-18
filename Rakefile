@@ -15,6 +15,9 @@ task :publish do
   # We don't wan't github to think this is a jekyll page
   sh "touch build/.nojekyll"
 
+  # Copy the README file
+  sh "cp README.md build/"
+
   # Checkin the build in master branch
   ENV['GIT_DIR'] = File.expand_path(`git rev-parse --git-dir`.chomp)
   old_sha = `git rev-parse refs/remotes/origin/master`.chomp
