@@ -1,1 +1,1 @@
-;
+$.ajax({url:"https://api.github.com/orgs/malmorb/public_members"}).done(function(e){console.log(e)});
