@@ -7,7 +7,7 @@ html, body {
   margin: 0;
 }
 body {
-  background: #fff;
+  background: white;
   text-align: center;
   font-family: sans-serif;
   color: #222;
@@ -20,28 +20,26 @@ a:link, a:hover, a:active, a:visited {
 
 h1 {
   padding: 350px 0 10px;
-  margin: 0; }
+  margin: 0;
+}
+h2 {
+  font-size: 300%;
+  text-align: center;
+}
 
 .welcome {
   width: 100%;
   padding-top: 8%;
-  margin: auto auto;
-  max-width: 50%;
 }
 
 .who-we-are {
-  padding-top: 5px;
-  padding-bottom: 10px;
   font-size:150%;
   line-height: 150%;
-  color: #900000;
-  color: green;
   color: black;
 }
 
 .using-ruby {
   text-align: center;
-  margin: 20px;
 }
 .using-ruby a {
   margin: 20px;
@@ -59,4 +57,44 @@ h1 {
   color: white;
   background: #D0021B;
   text-decoration: none;
+}
+
+
+/* The easiest grid layout system */
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 25px 250px 250px auto 250px 250px 25px;
+}
+
+/* Each grid element: a card */
+.card {
+  border-radius: 5px;
+}
+
+/* The card with Who We Are */
+.who-we-are {
+  grid-column: 3 / 6;
+  grid-row: 1;
+}
+
+/* The card with Next Event information */
+.events {
+  grid-column: 3 / 6;
+  grid-row: 2;
+  text-align: left;
+}
+
+/* The card with who is using Ruby in the region? */
+.using-ruby {
+  grid-column: 3 / 6;
+  grid-row: 3;
+}
+
+.events p {
+  font-size: 1.25em;
+}
+.events  .next-event {
+  font-size: 2em;
+  line-height: 125%;
 }

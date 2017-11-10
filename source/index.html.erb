@@ -23,6 +23,8 @@ organizations_using_ruby:
     url: https://www.jayway.com/
   - name: Bredband2
     url: https://www.bredband2.com/
+  - name: eCraft M3 Solutions
+    url: http://m3.ecraft.com/
 
 ---
 
@@ -36,17 +38,34 @@ organizations_using_ruby:
     <%= link_to "Github Organization", "https://github.com/malmorb/" %>
   </p><!-- .doc -->
 
-  <div class="who-we-are">
-    <p>A group of Ruby enthusiasts from sunny Malmö, Sweden who meet about every
-    month to talk about Ruby, programming, and other related topics.</p>
-  </div>
+  <div class="grid">
+    <div class="card who-we-are">
+      <p>A group of Ruby enthusiasts from sunny Malmö, Sweden who meet about every
+        month to talk about Ruby, programming, and other related topics.</p>
+    </div>
 
-  <div class="using-ruby">
-    <h2>Who is using Ruby?</h2>
-
-    <% current_page.data.organizations_using_ruby.sort_by {|o| o[:name] }.each do |org| %>
-    <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
-    <% end %>
+    <div class="card events">
+      <h2>Meetings</h2>
+      <p class="next-event"><b>Upcoming:</b> Using Regular Expressions,
+        dry-rb,
+        Introducing Elixir
+        </p>
+      <p>Friends of the group have offered to speak on diverse subjects
+      and it will be a good Tuesday.</p>
+      <p>All events are open and free of charge.</p>
+      <p><strong>Past</strong>: Nov 7: <em>What is new in Ruby 2.5?</em> at eCraft</p>
+      <p>Do you want to do a talk or some other activity? Get in touch!</p>
+    </div>
     
+
+    <div class="card using-ruby">
+      <h2>Who is using Ruby?</h2>
+
+      <% current_page.data.organizations_using_ruby.sort_by {|o| o[:name].upcase }.each do |org| %>
+          <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
+      <% end %>
+
+    </div>
   </div>
+
 </div><!-- .welcome -->
