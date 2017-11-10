@@ -24,5 +24,39 @@ h1 {
 
 .welcome {
   width: 100%;
-  padding-top: 10%;
+  padding-top: 8%;
+  margin: auto auto;
+  max-width: 50%;
+}
+
+.who-we-are {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size:150%;
+  line-height: 150%;
+  color: #900000;
+  color: green;
+  color: black;
+}
+
+.using-ruby {
+  text-align: center;
+  margin: 20px;
+}
+.using-ruby a {
+  margin: 20px;
+  padding: 10px;
+  line-height: 50px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.using-ruby a:hover,
+.using-ruby a:focus {
+  color: white;
+  background: #D0021B;
+  text-decoration: none;
 }
