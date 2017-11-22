@@ -7,7 +7,7 @@ html, body {
   margin: 0;
 }
 body {
-  background: #fff;
+  background: white;
   text-align: center;
   font-family: sans-serif;
   color: #222;
@@ -20,9 +20,81 @@ a:link, a:hover, a:active, a:visited {
 
 h1 {
   padding: 350px 0 10px;
-  margin: 0; }
+  margin: 0;
+}
+h2 {
+  font-size: 300%;
+  text-align: center;
+}
 
 .welcome {
   width: 100%;
-  padding-top: 10%;
+  padding-top: 8%;
+}
+
+.who-we-are {
+  font-size:150%;
+  line-height: 150%;
+  color: black;
+}
+
+.using-ruby {
+  text-align: center;
+}
+.using-ruby a {
+  margin: 20px;
+  padding: 10px;
+  line-height: 50px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.using-ruby a:hover,
+.using-ruby a:focus {
+  color: white;
+  background: #D0021B;
+  text-decoration: none;
+}
+
+
+/* The easiest grid layout system */
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 25px 250px 250px auto 250px 250px 25px;
+}
+
+/* Each grid element: a card */
+.card {
+  border-radius: 5px;
+}
+
+/* The card with Who We Are */
+.who-we-are {
+  grid-column: 3 / 6;
+  grid-row: 1;
+}
+
+/* The card with Next Event information */
+.events {
+  grid-column: 3 / 6;
+  grid-row: 2;
+  text-align: left;
+}
+
+/* The card with who is using Ruby in the region? */
+.using-ruby {
+  grid-column: 3 / 6;
+  grid-row: 3;
+}
+
+.events p {
+  font-size: 1.25em;
+}
+.events  .next-event {
+  font-size: 2em;
+  line-height: 125%;
 }
