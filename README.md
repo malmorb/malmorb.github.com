@@ -28,3 +28,7 @@ $ rake publish
 ```
 
 Kontakt @smgt, simon@smgt.me
+
+# Planera träffar
+
+Vi planerar träffar genom att skapa en GitHub Issue i detta repo.
