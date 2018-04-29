@@ -1,0 +1,31 @@
+#
+# This list is used on the home page.
+#
+- name: Arthro Therapeutics
+  url: "http://www.arthro.ai/"
+- name: Protetiko
+  url: "https://protetiko.com/"
+- name: Hero Gaming
+  url: "https://www.herogaming.com/"
+- name: Axis
+  url: "https://www.axis.com/"
+- name: RankTrail
+  url: "https://ranktrail.com/"
+- name: Castle
+  url: "https://castle.io/"
+- name: Upptec
+  url: "https://upptec.se/"
+- name: Foo Café
+  url: "http://foocafe.org/"
+- name: Qgroup
+  url: "http://qgroup.se/"
+- name: Jayway
+  url: "https://www.jayway.com/"
+- name: Bredband2
+  url: "https://www.bredband2.com/"
+- name: eCraft M3 Solutions
+  url: "http://m3.ecraft.com/"
+- name: Mokini Marketing Automation for eCommerce
+  url: "https://www.mokini.com/"
+- name: Boostified
+  url: "https://www.boostified.se"
