@@ -2,34 +2,58 @@
 title: "Malmö.rb: Malmö Ruby user group"
 organizations_using_ruby:
   - name: Arthro Therapeutics
-    url: http://www.arthro.ai/
+    url: "http://www.arthro.ai/"
   - name: Protetiko
-    url: https://protetiko.com/
+    url: "https://protetiko.com/"
   - name: Hero Gaming
-    url: https://www.herogaming.com/
+    url: "https://www.herogaming.com/"
   - name: Axis
-    url: https://www.axis.com/
+    url: "https://www.axis.com/"
   - name: RankTrail
-    url: https://ranktrail.com/
+    url: "https://ranktrail.com/"
   - name: Castle
-    url: https://castle.io/
+    url: "https://castle.io/"
   - name: Upptec
-    url: https://upptec.se/
+    url: "https://upptec.se/"
   - name: Foo Café
-    url: http://foocafe.org/
+    url: "http://foocafe.org/"
   - name: Qgroup
-    url: http://qgroup.se/
+    url: "http://qgroup.se/"
   - name: Jayway
-    url: https://www.jayway.com/
+    url: "https://www.jayway.com/"
   - name: Bredband2
-    url: https://www.bredband2.com/
+    url: "https://www.bredband2.com/"
   - name: eCraft M3 Solutions
-    url: http://m3.ecraft.com/
+    url: "http://m3.ecraft.com/"
   - name: Mokini Marketing Automation for eCommerce
-    url: https://www.mokini.com/
+    url: "https://www.mokini.com/"
   - name: Boostified
-    url: https://www.boostified.se
-
+    url: "https://www.boostified.se"
+current_event:
+  description: "Explore Ruby together - this time <b>Limits and Alternatives</b> is our theme. Two talks! "
+  date: "2018-05-08"
+  link_text: "Limits &amp; Alternatives"
+  location: "FooCafe"
+  url: "http://foocafe.org/malmoe/events/1786-limits-alternatives"
+past_events:
+  - link_text: "What I learned from building a twitter Art Bot"
+    date: "2018-04-03"
+    url: "http://foocafe.org/malmoe/events/1790-what-i-learned-from-building-a-twitter-art-bot"
+  - link_text: "Testing and Types"
+    date: "2018-03-06"
+    url: "http://www.foocafe.org/malmoe/events/1767-testing-and-types"
+  - link_text: "Creative Coding &amp; Documentation"
+    date: "2018-02-06"
+    url: "http://www.foocafe.org/malmoe/events/1768-creative-coding-documentation"
+  - link_text: "A guided tour of Ruby's Standard Libraries, pausing to look at the weird, the strange and the useful."
+    date: "2018-01-09"
+    url: "http://foocafe.org/malmoe/events/1662-ruby-standard-libraries"
+  - link_text: "Regular Expressions: How People Use Them, And How You Can Use Them, dry-rb for Rails teams, Why Elixir?, Build your own Ruby native extensions with Helix and Rust"
+    date: "2017-12-05"
+    url: "http://foocafe.org/malmoe/events/1661-regexp-rust-elexir-dry-each-t-t-presentation"
+  - link_text: "What is new in Ruby 2.5?"
+    date: "2017-11-07"
+    url: ""
 ---
 
 <div class="welcome">
@@ -51,13 +75,11 @@ organizations_using_ruby:
 
     <div class="card events">
       <h2>Attend a Meeting!</h2>
-      <p class="next-event"><b>Upcoming:</b> May 8
-        <a href="https://github.com/malmorb/malmorb.github.com/issues/15">Ruby meetup</a>
-        at FooCafe.</p>
+      <p class="next-event"><b>Upcoming:</b> <%= current_page.data.current_event[:date] %>
+        <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
+        at <%= current_page.data.current_event[:location] %>.</p>
 
-      <p>Explore Ruby together - this time <strong>Limits and Alternatives</strong> is
-        our theme. Two talks!
-      </p>
+      <p><%= current_page.data.current_event[:description] %></p>
 
       <p>All events are open to all skill levels &mdash; including absolute
          beginners &mdash; and are free of charge.</p>
@@ -66,14 +88,9 @@ organizations_using_ruby:
         Get in touch, join that Slack and mailing list!</p>
 
       <p><strong>Past</strong>:
-        April 3 <em><a href="http://foocafe.org/malmoe/events/1790-what-i-learned-from-building-a-twitter-art-bot">What I learned from building a twitter Art Bot</a></em>
-        March 6: <em><a href="http://www.foocafe.org/malmoe/events/1767-testing-and-types">Testing and Types</a></em>
-        Feb 6: <em><a href="http://www.foocafe.org/malmoe/events/1768-creative-coding-documentation">Creative Coding &amp; Documentation</a></em> at FooCafe.
-        Jan 9: <em><a href="http://foocafe.org/malmoe/events/1662-ruby-standard-libraries">"A guided tour of Ruby's Standard Libraries, pausing to look at the weird, the strange and the useful."</a></em> at Foocafe.
-        Dec 5: <em><a href="http://foocafe.org/malmoe/events/1661-regexp-rust-elexir-dry-each-t-t-presentation">Regular Expressions: How People Use Them, And How You Can Use Them,
-        dry-rb for Rails teams, Why Elixir?, Build your own Ruby native extensions with Helix and Rust</a></em> at Foocafe.
-        Nov 7: <em>What is new in Ruby 2.5?</em> at eCraft.</p>
-
+        <% current_page.data.past_events.sort_by {|o| o[:date] }.each do |event| %>
+            <%= event['date'] %> <em><a href="<%= event['url'] %>"><%= event['link_text'] %></a></em>
+        <% end %>
     </div>
 
     <div class="card using-ruby">
