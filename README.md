@@ -31,4 +31,30 @@ Kontakt @smgt, simon@smgt.me
 
 # Planera träffar
 
-Vi planerar träffar genom att skapa en GitHub Issue i detta repo.
+## Rutiner
+
+### GitHub Issues
+
+Vi planerar träffar genom att **skapa en GitHub Issue** i detta repo.
+
+När Issuen är skapad så sätter vi dit en Label, t.ex. `Meetup` och `Talks needed`.
+
+### Beskriv eventet
+
+Samla ihop en beskrivning av eventet, en trevlig en. Gör en bra titel.
+
+#### Skicka beskrivningen till värden (t.ex. FooCafe)
+
+Vi har samarbetat mycket och väl med [FooCafe](http://foocafe.org/) i Malmö - lokaler och snacks varje gång, tack så mycket!
+
+Innan den 15:e i månaden gäller det att skriva klart nästa beskrivning av event. Då kommer vi med i utskicket, och folk har tid att planera att komma.
+
+Skicka eventbeskrivningen till dem.
+
+#### Skicka beskrivningen till mejllistan
+
+Det finns en mejllista också, skriv ett kort mejl med länken till GitHub Issuen. Exempel på ämnesrad: `[ANN] Malmo.rb meetup on Nov 4`.
+
+### Inför ny termin
+
+Skriv in GitHub Issues med mallar för event i varje, och ge dem datumet som titel.
