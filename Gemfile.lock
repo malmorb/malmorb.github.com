@@ -102,7 +102,7 @@ GEM
       httpclient (>= 2.2)
       json
       rake
-    sprockets (2.12.4)
+    sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -134,4 +134,4 @@ DEPENDENCIES
   rake
 
 BUNDLED WITH
-   1.16.2
+   1.16.4
