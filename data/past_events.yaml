@@ -1,3 +1,8 @@
+- date: "2018-10-09"
+  description: "Explore Ruby together - we are back on October 9! "
+  link_text: "Learn about Ruby and Linux signals + Modular Synthesizers"
+  location: "FooCafe"
+  url: "https://github.com/malmorb/malmorb.github.com/issues/21"
 - date: "2018-06-05"
   link_text: "Event Sourcing in Ruby using Sandthorn"
   location: "FooCafe"
