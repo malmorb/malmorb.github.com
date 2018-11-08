@@ -27,6 +27,10 @@
 # with_layout :admin do
 #   page "/admin/*"
 # end
+with_layout :events do
+  page "/events/*"
+end
+
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do

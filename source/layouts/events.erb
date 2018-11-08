@@ -1,0 +1,34 @@
+<% wrap_layout :layout do %>
+  <article class="event">
+	<h2>
+		Malmö.rb meetup on <%= data['page']['date'] %>
+	</h2>
+  	<h3>
+  		<%= data['page']['theme']['name'] %>
+  	</h3>
+  	<p>
+  		<%= data['page']['theme']['description'] %>	
+  	</p>
+
+	<h3>
+		Planned Activities
+	</h3>
+
+	<% data['page']['speakers'].each do |speaker| %>
+	  <h4>
+	  	<%= speaker['name'] %>: <%= speaker['talk_title'] %>
+	  </h4>
+	  <p class="talk-description">
+	  	<%= speaker['talk_description'] %>
+	  </p>
+	<% end %>
+
+	<h2>Facts</h2>
+  	<p>
+  		Date: <%= data['page']['date'] %>
+  	</p>
+  	
+    
+    <%= yield %>
+  </article>
+<% end %>
