@@ -14,14 +14,30 @@
 		Planned Activities
 	</h3>
 
+  <% if data['page']['planned_activities_description'].present? %>
+    <p>
+      <%=  data['page']['planned_activities_description'] %>
+    </p>
+  <% end %>
+
 	<% data['page']['speakers'].each do |speaker| %>
 	  <h4>
-	  	<%= speaker['name'] %>: <%= speaker['talk_title'] %>
+	  	<%= speaker['name'] %>: <em><%= speaker['talk_title'] %></em>
 	  </h4>
 	  <p class="talk-description">
 	  	<%= speaker['talk_description'] %>
 	  </p>
 	<% end %>
+
+  <h2>Sign up!</h2>
+
+  <p>
+    <% if data['page']['signup_link'].present? %>
+      <a href="<%=  data['page']['signup_link'] %>" title="Sign up!">Sign up!</a>
+    <% else %>
+      <em>Soon there will be a link here!</em>
+    <% end %>
+  </p>
 
 	<h2>Facts</h2>
   	<p>
