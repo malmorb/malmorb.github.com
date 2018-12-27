@@ -1,11 +1,11 @@
 ---
 title: "Malmö.rb: Malmö Ruby user group"
 current_event:
-  description: "Explore Ruby together - next meetup December 4! "
-  date: "2018-12-04"
-  link_text: "Theme to be decided"
+  description: "Explore Ruby together - next meetup January 8! "
+  date: "2019-01-08"
+  link_text: "Theme: Game tooling & Ruby 2.6"
   location: "eCraft - Skeppsbron 3, Malmö"
-  url: "https://github.com/malmorb/malmorb.github.com/issues/23"
+  url: "/events/meetup-january.html"
 ---
 
 <div class="welcome">
@@ -21,8 +21,7 @@ current_event:
 
   <div class="grid">
     <div class="card who-we-are">
-      <p>A group of Ruby enthusiasts from sunny Malmö, Sweden who meet about every
-        month to talk about Ruby, programming, and other related topics.</p>
+      <p>A group of <strong>Ruby</strong> enthusiasts from sunny <strong>Malmö</strong>, Sweden who meet regularly to talk about Ruby, programming, and related topics.</p>
     </div>
 
     <div class="card events">
@@ -39,12 +38,6 @@ current_event:
       <p><strong>Future</strong>: Do you want to do a talk or some other activity?
         Get in touch, join that Slack and mailing list!</p>
 
-      <p><strong>Past</strong>:
-        <% data.past_events.sort_by {|o| o[:date] }.reverse.each do |event| %>
-            <%= short_date event['date'] %> <em>
-              <%= link_to event['link_text'], event['url'] %>
-            </em>
-        <% end %>
     </div>
 
     <div class="card using-ruby">
