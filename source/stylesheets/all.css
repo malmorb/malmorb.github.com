@@ -99,32 +99,25 @@ h2 {
   line-height: 125%;
 }
 
-/* Pages in /events/ have this. */
-.event-page {
+/* Pages: events, about. */
+
+.page {
   margin-right: 2em;
   margin-left: 2em;
-}
-.event-page h2 {
-  font-size: 300%;
-}
-.event-page h3 {
-  font-size: 175%;
-}
-.event-page h4 {
-  font-size: 150%;
+  text-align: left; 
 }
 
-/* Pages in /about/ have this. */
-.about-page {
-  margin-right: 2em;
-  margin-left: 2em;
+.page h2,
+.page h3,
+.page h4 {
+  text-align: left;
 }
-.about-page h2 {
+.page h2 {
   font-size: 300%;
 }
-.about-page h3 {
+.page h3 {
   font-size: 175%;
 }
-.about-page h4 {
+.page h4 {
   font-size: 150%;
 }

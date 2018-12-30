@@ -4,14 +4,13 @@ title: Past events
 ---
 
 <p>
-Events for which we didn't keep a page at this website.
+Here is a list of <b>past events</b> for which we didn't keep a page at this website.
 </p>
 
 
 <% data.past_events.sort_by {|o| o[:date] }.reverse.each do |event| %>
   <div>
     <%= iso_date event['date'] %> <em>
-      <%= link_to event['link_text'], event['url'] %>
-    </em>
+      <%= link_to event['link_text'], event['url'] %></em> (<%= event['location'] %>)
   </div>
 <% end %>
