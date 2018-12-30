@@ -5,7 +5,7 @@ title: About Ruby
 
 <h3>What is Ruby?</h3>
 
-<h4>It's a programming language</h4>
+<h4>Ruby is a programming language</h4>
 
 <p>
 	Optimized for programmer happiness, it says.
@@ -23,12 +23,35 @@ title: About Ruby
 	<a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Wikipedia page on Ruby</a>
 </p>
 
-<h4>Is it used?</h4>
+<h4>Is Ruby being used?</h4>
 <p>
   Ruby is one of
   <a href="https://www.businessinsider.com/the-10-most-popular-programming-languages-according-to-github-2018-10">the 10 most popular programming languages, according to GitHub in 2018</a>.
 </p>
 
 <p>
-  Ruby has enjoyed being in the top-10 of the TIOBE index for a 10-year consecutive period.
+  Ruby has enjoyed being in the top-10 of the
+  <%= link_to 'TIOBE index', 'https://en.wikipedia.org/wiki/TIOBE_index' %> for
+  a 10-year consecutive period.
+</p>
+
+<h4>Who is using Ruby?</h4>
+
+<p>Companies in Malmö who are using Ruby, as an incomplete list:</p>
+
+<% data.organizations_using_ruby.sort_by {|o| o[:name].upcase }.each do |org| %>
+  <%= link_to org['name'], org['url'], target: '_blank' %>
+<% end %>
+
+<h3>Where can I learn to program Ruby?</h3>
+
+<p>
+	The Ruby language homepage has a 20-minute tutorial, designed to explore
+	the language: <%= link_to 'Ruby in Twenty Minutes', 'https://www.ruby-lang.org/en/documentation/quickstart/' %>.
+</p>
+
+<p>
+	The <%= link_to 'Rails Girls Guides', 'https://guides.railsgirls.com/' %>
+	are especially good, being detailed at all levels. They include how to
+	get started on macOS, Windows and Linux.
 </p>
