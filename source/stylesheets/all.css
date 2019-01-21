@@ -129,6 +129,8 @@ h2 {
   margin-right: 2em;
   margin-left: 2em;
   text-align: left; 
+  margin-bottom: 4em;
+  max-width: 50em;
 }
 
 .page h2,
