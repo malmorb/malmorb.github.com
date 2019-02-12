@@ -1,3 +1,8 @@
+- date: "2019-02-05"
+  description: "On February 5, we Explore Ruby together!"
+  link_text: "Theme: Add login to your first Ruby app!"
+  location: "FooCafe, Stora Varvsgatan 6a, 211 19 Malmö"
+  url: "/events/2019/meetup-february.html"
 - date: "2018-10-09"
   description: "Explore Ruby together - we are back on October 9! "
   link_text: "Learn about Ruby and Linux signals + Modular Synthesizers"
