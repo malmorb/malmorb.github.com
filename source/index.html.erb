@@ -1,26 +1,28 @@
 ---
 title: "Malmö.rb: Malmö Ruby user group"
 current_event:
-  description: "On February 5, we Explore Ruby together!"
-  date: "2019-02-05"
-  link_text: "Theme: Add login to your first Ruby app!"
+  description: "On March 5, we Explore Ruby together!"
+  date: "2019-03-05"
+  link_text: "Theme: Road to Nowhere!"
   location: "FooCafe, Stora Varvsgatan 6a, 211 19 Malmö"
-  url: "/events/2019/meetup-february.html"
+  url: "/events/2019/meetup-march.html"
 ---
 
 <div class="welcome">
-  <%= image_tag 'logo.png', alt: 'Malmö.rb', title: 'Malmö.rb' %>
-  <p class="doc">
-    <%= link_to "Slack", "http://oreslack.herokuapp.com", title: "Invite yourself to our chat channel #malmorb" %> |
-    <%= link_to "Mailing List",
-    "https://groups.google.com/forum/?fromgroups#!forum/malmorb", title: "Our mailing list is a Google Groups list for announcements" %>
-    | <a href="http://twitter.com/malmorb">Twitter</a> |
-    <%= link_to "Github Organization", "https://github.com/malmorb/" %> |
-    <%= link_to "Code of Conduct", "http://berlincodeofconduct.org/", title: "Our CoC is the Berlin Code of Conduct" %> |
-    <%= link_to "About us", "/about/malmorb.html", title: "What we are about" %>
-  </p><!-- .doc -->
-
   <div class="grid">
+    <header>
+      <%= image_tag 'logo.png', alt: 'Malmö.rb', title: 'Malmö.rb' %>
+      <p class="doc">
+        <%= link_to "Slack", "http://oreslack.herokuapp.com", title: "Invite yourself to our chat channel #malmorb" %> |
+        <%= link_to "Mailing List",
+                    "https://groups.google.com/forum/?fromgroups#!forum/malmorb", title: "Our mailing list is a Google Groups list for announcements" %>
+        | <a href="http://twitter.com/malmorb">Twitter</a> |
+        <%= link_to "Github Organization", "https://github.com/malmorb/" %> |
+        <%= link_to "Code of Conduct", "http://berlincodeofconduct.org/", title: "Our CoC is the Berlin Code of Conduct" %> |
+        <%= link_to "About us", "/about/malmorb.html", title: "What we are about" %>
+      </p><!-- .doc -->
+    </header>
+
     <div class="card who-we-are">
       <p>A group of <strong>Ruby</strong> enthusiasts from sunny <strong>Malmö</strong>, Sweden who meet regularly to talk about Ruby, programming, and related topics.</p>
     </div>
@@ -41,12 +43,24 @@ current_event:
 
     </div>
 
-    <div class="card using-ruby">
-      <h2>Who is using Ruby?</h2>
+    <div class="card supporters with-fancy-links">
+      <h2>Supporters</h2>
 
-      <% data.organizations_using_ruby.sort_by {|o| o[:name].upcase }.each do |org| %>
+      <% data.supporters.sort_by { |o| o[:name].upcase }.each do |org| %>
           <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
       <% end %>
     </div>
+
+    <div class="card using-ruby with-fancy-links">
+      <h2>Ruby users</h2>
+
+      <% data.organizations_using_ruby.sort_by { |o| o[:name].upcase }.each do |org| %>
+          <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
+      <% end %>
+    </div>
+
+    <footer>
+
+    </footer>
   </div>
 </div><!-- .welcome -->

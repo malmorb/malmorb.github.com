@@ -6,16 +6,17 @@ html, body {
   padding: 0;
   margin: 0;
 }
+
 body {
   background: white;
   text-align: center;
   font-family: sans-serif;
+  font-size: large;
   color: #222;
 }
 
 a:link, a:hover, a:active, a:visited {
   color: #ee0000;
-
 }
 
 h1 {
@@ -38,22 +39,23 @@ h2 {
   color: black;
 }
 
-.using-ruby {
+.with-fancy-links {
   text-align: center;
 }
-.using-ruby a {
+.with-fancy-links a {
   margin: 20px;
   padding: 10px;
   line-height: 50px;
   border-radius: 3px;
-  font-size: 18px;
+  font-size: 1.25em;
   font-family: sans-serif;
   font-weight: 400;
   white-space: nowrap;
   text-decoration: none;
 }
-.using-ruby a:hover,
-.using-ruby a:focus {
+
+.with-fancy-links a:hover,
+.with-fancy-links a:focus {
   color: white;
   background: #D0021B;
   text-decoration: none;
@@ -61,57 +63,45 @@ h2 {
 
 /* The easiest grid layout system */
 .grid {
+  padding: 60px;
   display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 25px 250px 250px auto 250px 250px 25px;
+  grid-template-columns: 1fr;
+}
+
+header {
+  font-size: 1.25em;
+  grid-column: 3 / 6;
+  grid-row: 1;
 }
 
 /* The card with who we are */
 .who-we-are {
   grid-column: 3 / 6;
-  grid-row: 1;
+  grid-row: 2;
 }
 
 /* The card "Attend a Meeting!" */
 .events {
   grid-column: 3 / 6;
-  grid-row: 2;
+  grid-row: 3;
   text-align: left;
+}
+
+/* The card "Who is supporting Ruby?" */
+.supporters {
+  grid-column: 3 / 6;
+  grid-row: 4;
 }
 
 /* The card "Who is using Ruby?" */
 .using-ruby {
   grid-column: 3 / 6;
-  grid-row: 3;
+  grid-row: 5;
 }
 
-/* For mobile phone widths */
-@media only screen and (max-width: 400px) {
-  img { max-width: 350px; }
-  .grid {
-    grid-gap: 10px;
-    grid-template-columns: 0 0 0 auto 0 0 0
-  }
-
-  .card {
-    max-width: 330px;
-  }
-
-  .using-ruby a {
-    white-space: normal !important;
-    display: block;
-  }
-
-  .using-ruby h2 {
-    white-space: normal !important;
-  }
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  .grid {
-    grid-template-columns: 15px 0 250px auto 250px 0 15px;
-  }
+footer {
+  grid-column: 3 / 6;
+  grid-row: 6;
 }
 
 .events p {
@@ -130,7 +120,7 @@ h2 {
   margin-left: 2em;
   text-align: left; 
   margin-bottom: 4em;
-  max-width: 50em;
+  max-width: 45em;
 }
 
 .page h2,
@@ -152,4 +142,54 @@ h2 {
   position: fixed;
   top: 20px;
   right: 30px;
+}
+
+/* For mobile phone widths */
+@media screen and (max-width: 420px) {
+  body {
+    font-size: xx-large;
+  }
+  img { max-width: 350px; }
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .card {
+    max-width: 330px;
+  }
+
+  .with-fancy-links a {
+    white-space: normal !important;
+    display: block;
+  }
+
+  .with-fancy-links h2 {
+    white-space: normal !important;
+  }
+
+  #our-logo {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+
+  .event-page {
+    margin-top: 5.5em;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 421px) and (max-width: 1024px) {
+
+  body {
+    font-size: xx-large;
+  }
+
+  .page {
+    margin-right: 2em;
+    margin-left: 2em;
+    text-align: left;
+    margin-bottom: 4em;
+    max-width: 45em;
+  }
 }

@@ -6,19 +6,22 @@
   </div>
 
   <article class="page event-page">
-	<h2>
-		Malmö.rb meetup on <%= data['page']['date'] %>
-	</h2>
+		<h2>
+			Malmö.rb meetup on <%= data['page']['date'] %>
+		</h2>
+
   	<h3>
   		<%= data['page']['theme']['name'] %>
   	</h3>
+
   	<p>
   		<%= data['page']['theme']['description'] %>	
   	</p>
 
-	<h3>
-		Planned Activities
-	</h3>
+
+		<h3>
+			Planned Activities
+		</h3>
 
   <% if data['page']['planned_activities_description'].present? %>
     <p>
@@ -30,9 +33,8 @@
 	  <h4>
 	  	<%= speaker['name'] %>: <em><%= speaker['talk_title'] %></em>
 	  </h4>
-	  <p class="talk-description">
-	  	<%= speaker['talk_description'] %>
-	  </p>
+
+	  <p class="talk-description"><%= speaker['talk_description'] %></p>
 	<% end %>
 
   <h2>Sign up!</h2>
@@ -46,14 +48,9 @@
   </p>
 
 	<h2>Facts</h2>
-  	<p>
-  		Date: <%= data['page']['date'] %>
-  	</p>
-  	<p>
-  		Location: <%= data['page']['location'] %>
-  	</p>
-  	
-    
+  	<p>Date: <%= data['page']['date'] %></p>
+  	<p>Location: <%= data['page']['location'] %></p>
+
     <%= yield %>
   </article>
 <% end %>
