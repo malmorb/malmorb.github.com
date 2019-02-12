@@ -52,9 +52,7 @@ end
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
@@ -81,4 +79,10 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+# Development-specific configuration
+configure :development do
+  # Activate live reload
+  activate :livereload
 end
