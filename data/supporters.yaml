@@ -1,0 +1,5 @@
+#
+# This list is used on the home page.
+#
+- name: Foo Café
+  url: "http://foocafe.org/"
