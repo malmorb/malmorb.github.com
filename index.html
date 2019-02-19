@@ -11,6 +11,8 @@
     <meta property="og:url" content="http://malmorb.se"/>
     <meta property="og:image" content="http://malmorb.se/images/avatar.png"/>
 
+    <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>Malmö.rb: Malmö Ruby user group</title>
 
@@ -23,14 +25,16 @@
   <div class="grid">
     <header>
       <img alt="Malmö.rb" title="Malmö.rb" src="http://malmorb.se/images/logo.png" />
-      <p class="doc">
-        <a href="http://oreslack.herokuapp.com" title="Invite yourself to our chat channel #malmorb">Slack</a> |
-        <a href="https://groups.google.com/forum/?fromgroups#!forum/malmorb" title="Our mailing list is a Google Groups list for announcements">Mailing List</a>
-        | <a href="http://twitter.com/malmorb">Twitter</a> |
-        <a href="https://github.com/malmorb/">Github Organization</a> |
-        <a href="http://berlincodeofconduct.org/" title="Our CoC is the Berlin Code of Conduct">Code of Conduct</a> |
-        <a href="/about/malmorb.html" title="What we are about">About us</a>
-      </p><!-- .doc -->
+      <nav class="doc">
+        <ul class="global-navigation">
+          <li>
+            <a href="/about/malmorb.html" title="What we are about">About us</a>
+          </li>
+          <li>
+            <a href="http://berlincodeofconduct.org/" title="Our CoC is the Berlin Code of Conduct">Code of Conduct</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <div class="card who-we-are">
@@ -38,8 +42,9 @@
     </div>
 
     <div class="card events">
-      <h2>Attend a Meeting!</h2>
-      <p class="next-event"><b>Upcoming:</b> Mar 5
+      <h2>Our Next Meeting!</h2>
+
+      <p><b>Upcoming:</b> Mar 5
         <a href="/events/2019/meetup-march.html">Theme: Serverless!</a>
         at FooCafe, Stora Varvsgatan 6a, 211 19 Malmö.</p>
 
@@ -56,30 +61,77 @@
     <div class="card supporters with-fancy-links">
       <h2>Supporters</h2>
 
-          <a href="http://foocafe.org/" target="_blank">Foo Café</a>
+      <ul class="supporters-list">
+        <li><a href="http://foocafe.org/" target="_blank">Foo Café</a></li>
+      </ul>
     </div>
 
     <div class="card using-ruby with-fancy-links">
       <h2>Ruby users</h2>
 
+      <ul class="ruby-users-list">
+        <li>
           <a href="https://www.axis.com/" target="_blank">Axis</a>
+        </li>
+        <li>
           <a href="https://www.boostified.se" target="_blank">Boostified</a>
+        </li>
+        <li>
           <a href="https://www.bredband2.com/" target="_blank">Bredband2</a>
+        </li>
+        <li>
           <a href="https://castle.io/" target="_blank">Castle</a>
+        </li>
+        <li>
           <a href="http://m3.ecraft.com/" target="_blank">eCraft M3 Solutions</a>
+        </li>
+        <li>
           <a href="http://foocafe.org/" target="_blank">Foo Café</a>
+        </li>
+        <li>
           <a href="https://www.herogaming.com/" target="_blank">Hero Gaming</a>
+        </li>
+        <li>
           <a href="https://www.jayway.com/" target="_blank">Jayway</a>
+        </li>
+        <li>
           <a href="https://www.jointacademy.com/" target="_blank">Joint Academy / Arthro Therapeutics</a>
+        </li>
+        <li>
           <a href="https://www.mokini.com/" target="_blank">Mokini Marketing Automation for eCommerce</a>
+        </li>
+        <li>
           <a href="https://protetiko.com/" target="_blank">Protetiko</a>
+        </li>
+        <li>
           <a href="http://qgroup.se/" target="_blank">Qgroup</a>
+        </li>
+        <li>
           <a href="https://ranktrail.se/" target="_blank">RankTrail</a>
+        </li>
+        <li>
           <a href="https://upptec.se/" target="_blank">Upptec</a>
+        </li>
+      </ul>
     </div>
 
     <footer>
+      <h2>Elsewhere on the web</h2>
 
+      <ul>
+        <li>
+          <a href="http://oreslack.herokuapp.com" title="Invite yourself to our chat channel #malmorb">Slack</a>
+        </li>
+        <li>
+          <a href="https://groups.google.com/forum/?fromgroups#!forum/malmorb" title="Our mailing list is a Google Groups list for announcements">Mailing List</a>
+        </li>
+        <li>
+          <a href="http://twitter.com/malmorb">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/malmorb/">Github Organization</a>
+        </li>
+      </ul>
     </footer>
   </div>
 </div><!-- .welcome -->
