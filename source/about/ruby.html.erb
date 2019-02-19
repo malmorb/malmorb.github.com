@@ -8,19 +8,19 @@ title: About Ruby
 <h4>Ruby is a programming language</h4>
 
 <p>
-	Optimized for programmer happiness, it says.
+    Optimized for programmer happiness, it says.
 </p>
 
 <p>
-	Made in Japan.
+    Made in Japan.
 </p>
 
 <p>
-	Started in 1995.
+    Started in 1995.
 </p>
 
 <p>
-	<a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Wikipedia page on Ruby</a>
+    <a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Wikipedia page on Ruby</a>
 </p>
 
 <h4>Is Ruby being used?</h4>
@@ -39,19 +39,21 @@ title: About Ruby
 
 <p>Companies in Malmö who are using Ruby, as an incomplete list:</p>
 
-<% data.organizations_using_ruby.sort_by {|o| o[:name].upcase }.each do |org| %>
-  <%= link_to org['name'], org['url'], target: '_blank' %>
-<% end %>
+<ul>
+  <% data.organizations_using_ruby.sort_by {|o| o[:name].upcase }.each do |org| %>
+    <li><%= link_to org['name'], org['url'], target: '_blank' %></li>
+  <% end %>
+</ul>
 
 <h3>Where can I learn to program Ruby?</h3>
 
 <p>
-	The Ruby language homepage has a 20-minute tutorial, designed to explore
-	the language: <%= link_to 'Ruby in Twenty Minutes', 'https://www.ruby-lang.org/en/documentation/quickstart/' %>.
+    The Ruby language homepage has a 20-minute tutorial, designed to explore
+    the language: <%= link_to 'Ruby in Twenty Minutes', 'https://www.ruby-lang.org/en/documentation/quickstart/' %>.
 </p>
 
 <p>
-	The <%= link_to 'Rails Girls Guides', 'https://guides.railsgirls.com/' %>
-	are especially good, being detailed at all levels. They include how to
-	get started on macOS, Windows and Linux.
+    The <%= link_to 'Rails Girls Guides', 'https://guides.railsgirls.com/' %>
+    are especially good, being detailed at all levels. They include how to
+    get started on macOS, Windows and Linux.
 </p>

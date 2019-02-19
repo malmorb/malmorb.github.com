@@ -1,19 +1,21 @@
 @charset "utf-8";
 
 html, body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
   margin: 0;
 }
 
 body {
   background: white;
-  text-align: center;
   font-family: sans-serif;
-  font-size: large;
   color: #222;
+  line-height: 1.5;
+
+  max-width: 70ch;
+  width: 94%;
+  margin: 0 auto;
 }
+
+img { max-width: 100%; }
 
 a:link, a:hover, a:active, a:visited {
   color: #ee0000;
@@ -35,22 +37,13 @@ h2 {
 
 .who-we-are {
   font-size:150%;
-  line-height: 150%;
+  line-height: 1.5;
   color: black;
-}
-
-.with-fancy-links {
   text-align: center;
 }
+
 .with-fancy-links a {
-  margin: 20px;
-  padding: 10px;
-  line-height: 50px;
   border-radius: 3px;
-  font-size: 1.25em;
-  font-family: sans-serif;
-  font-weight: 400;
-  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -61,73 +54,59 @@ h2 {
   text-decoration: none;
 }
 
-/* The easiest grid layout system */
-.grid {
-  padding: 60px;
-  display: grid;
-  grid-template-columns: 1fr;
+.supporters.with-fancy-links a {
+  font-size: 1.75em;
 }
 
 header {
   font-size: 1.25em;
-  grid-column: 3 / 6;
-  grid-row: 1;
 }
 
-/* The card with who we are */
-.who-we-are {
-  grid-column: 3 / 6;
-  grid-row: 2;
+footer ul,
+.ruby-users-list,
+.supporters-list,
+.global-navigation {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* The card "Attend a Meeting!" */
-.events {
-  grid-column: 3 / 6;
-  grid-row: 3;
-  text-align: left;
+.global-navigation li {
+  margin: 0.2em;
 }
 
-/* The card "Who is supporting Ruby?" */
-.supporters {
-  grid-column: 3 / 6;
-  grid-row: 4;
+.global-navigation li a {
+  padding: 0.6em 0.5em;
+  display: block;
 }
 
-/* The card "Who is using Ruby?" */
-.using-ruby {
-  grid-column: 3 / 6;
-  grid-row: 5;
+footer li,
+.ruby-users-list li,
+.supporters-list li {
+  margin: 0.2em;
 }
+footer li a,
+.ruby-users-list li a,
+.supporters-list li a {
+  padding: 0.6em 0.5em;
+  display: block;
+  text-align: center;
+}
+
 
 footer {
-  grid-column: 3 / 6;
-  grid-row: 6;
 }
 
 .events p {
   font-size: 1.25em;
 }
 
-.events  .next-event {
-  font-size: 2em;
-  line-height: 125%;
-}
-
 /* Pages: events, about. */
-
 .page {
-  margin-right: 2em;
-  margin-left: 2em;
-  text-align: left; 
-  margin-bottom: 4em;
-  max-width: 45em;
 }
 
-.page h2,
-.page h3,
-.page h4 {
-  text-align: left;
-}
 .page h2 {
   font-size: 300%;
 }
@@ -144,29 +123,12 @@ footer {
   right: 30px;
 }
 
+footer ul {
+  list-style: none;
+}
+
 /* For mobile phone widths */
-@media screen and (max-width: 420px) {
-  body {
-    font-size: xx-large;
-  }
-  img { max-width: 350px; }
-  .grid {
-    grid-gap: 10px;
-  }
-
-  .card {
-    max-width: 330px;
-  }
-
-  .with-fancy-links a {
-    white-space: normal !important;
-    display: block;
-  }
-
-  .with-fancy-links h2 {
-    white-space: normal !important;
-  }
-
+@media (max-width: 420px) {
   #our-logo {
     position: absolute;
     top: 20px;
@@ -178,18 +140,13 @@ footer {
   }
 }
 
-/* Tablet Styles */
-@media screen and (min-width: 421px) and (max-width: 1024px) {
-
-  body {
-    font-size: xx-large;
+/* Regular Screen Styles */
+@media (min-width: 1025px) {
+  p, li {
+    font-size: 1.5em;
   }
 
-  .page {
-    margin-right: 2em;
-    margin-left: 2em;
-    text-align: left;
-    margin-bottom: 4em;
-    max-width: 45em;
+  .events p {
+    font-size: 1.75em;
   }
 }

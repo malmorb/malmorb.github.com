@@ -12,15 +12,16 @@ current_event:
   <div class="grid">
     <header>
       <%= image_tag 'logo.png', alt: 'Malmö.rb', title: 'Malmö.rb' %>
-      <p class="doc">
-        <%= link_to "Slack", "http://oreslack.herokuapp.com", title: "Invite yourself to our chat channel #malmorb" %> |
-        <%= link_to "Mailing List",
-                    "https://groups.google.com/forum/?fromgroups#!forum/malmorb", title: "Our mailing list is a Google Groups list for announcements" %>
-        | <a href="http://twitter.com/malmorb">Twitter</a> |
-        <%= link_to "Github Organization", "https://github.com/malmorb/" %> |
-        <%= link_to "Code of Conduct", "http://berlincodeofconduct.org/", title: "Our CoC is the Berlin Code of Conduct" %> |
-        <%= link_to "About us", "/about/malmorb.html", title: "What we are about" %>
-      </p><!-- .doc -->
+      <nav class="doc">
+        <ul class="global-navigation">
+          <li>
+            <%= link_to "About us", "/about/malmorb.html", title: "What we are about" %>
+          </li>
+          <li>
+            <%= link_to "Code of Conduct", "http://berlincodeofconduct.org/", title: "Our CoC is the Berlin Code of Conduct" %>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <div class="card who-we-are">
@@ -28,8 +29,9 @@ current_event:
     </div>
 
     <div class="card events">
-      <h2>Attend a Meeting!</h2>
-      <p class="next-event"><b>Upcoming:</b> <%= short_date current_page.data.current_event[:date] %>
+      <h2>Our Next Meeting!</h2>
+
+      <p><b>Upcoming:</b> <%= short_date current_page.data.current_event[:date] %>
         <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
         at <%= current_page.data.current_event[:location] %>.</p>
 
@@ -46,21 +48,43 @@ current_event:
     <div class="card supporters with-fancy-links">
       <h2>Supporters</h2>
 
+      <ul class="supporters-list">
       <% data.supporters.sort_by { |o| o[:name].upcase }.each do |org| %>
-          <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
+        <li><a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a></li>
       <% end %>
+      </ul>
     </div>
 
     <div class="card using-ruby with-fancy-links">
       <h2>Ruby users</h2>
 
-      <% data.organizations_using_ruby.sort_by { |o| o[:name].upcase }.each do |org| %>
+      <ul class="ruby-users-list">
+        <% data.organizations_using_ruby.sort_by { |o| o[:name].upcase }.each do |org| %>
+        <li>
           <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
+        </li>
       <% end %>
+      </ul>
     </div>
 
     <footer>
+      <h2>Elsewhere on the web</h2>
 
+      <ul>
+        <li>
+          <%= link_to "Slack", "http://oreslack.herokuapp.com", title: "Invite yourself to our chat channel #malmorb" %>
+        </li>
+        <li>
+          <%= link_to "Mailing List",
+                  "https://groups.google.com/forum/?fromgroups#!forum/malmorb", title: "Our mailing list is a Google Groups list for announcements" %>
+        </li>
+        <li>
+          <a href="http://twitter.com/malmorb">Twitter</a>
+        </li>
+        <li>
+          <%= link_to "Github Organization", "https://github.com/malmorb/" %>
+        </li>
+      </ul>
     </footer>
   </div>
 </div><!-- .welcome -->
