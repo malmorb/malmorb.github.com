@@ -30,19 +30,23 @@ current_event:
 
     <div class="card events">
       <h2>Our Next Meeting!</h2>
+      <div class="event-details">
+        <div class="events-upcoming">
+          <p><b>Upcoming:</b> <%= short_date current_page.data.current_event[:date] %>
+          <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
+          at <%= current_page.data.current_event[:location] %>.</p>
 
-      <p><b>Upcoming:</b> <%= short_date current_page.data.current_event[:date] %>
-        <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
-        at <%= current_page.data.current_event[:location] %>.</p>
+          <p><%= current_page.data.current_event[:description] %></p>
 
-      <p><%= current_page.data.current_event[:description] %></p>
+          <p>All events are open to all skill levels &mdash; including absolute
+           beginners &mdash; and are free of charge.</p>
+        </div>
 
-      <p>All events are open to all skill levels &mdash; including absolute
-         beginners &mdash; and are free of charge.</p>
-
-      <p><strong>Future</strong>: Do you want to do a talk or some other activity?
-        Get in touch, join #malmorb on <%= link_to "Øreslack", "http://oreslack.herokuapp.com" %> and the <%= link_to "mailing list", "https://groups.google.com/forum/?fromgroups#!forum/malmorb" %>!</p>
-
+        <div class="events-future">
+          <p><strong>Future</strong>: Do you want to do a talk or some other activity?
+          Get in touch, join #malmorb on <%= link_to "Øreslack", "http://oreslack.herokuapp.com" %> and the <%= link_to "mailing list", "https://groups.google.com/forum/?fromgroups#!forum/malmorb" %>!</p>
+        </div>
+      </div>
     </div>
 
     <div class="card supporters with-fancy-links">
@@ -67,24 +71,6 @@ current_event:
       </ul>
     </div>
 
-    <footer>
-      <h2>Elsewhere on the web</h2>
 
-      <ul>
-        <li>
-          <%= link_to "Slack", "http://oreslack.herokuapp.com", title: "Invite yourself to our chat channel #malmorb" %>
-        </li>
-        <li>
-          <%= link_to "Mailing List",
-                  "https://groups.google.com/forum/?fromgroups#!forum/malmorb", title: "Our mailing list is a Google Groups list for announcements" %>
-        </li>
-        <li>
-          <a href="http://twitter.com/malmorb">Twitter</a>
-        </li>
-        <li>
-          <%= link_to "Github Organization", "https://github.com/malmorb/" %>
-        </li>
-      </ul>
-    </footer>
   </div>
 </div><!-- .welcome -->
