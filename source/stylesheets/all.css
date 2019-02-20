@@ -16,6 +16,7 @@ body {
 }
 
 img { max-width: 100%; }
+.frontpage-logo { width: 100%; }
 
 a:link, a:hover, a:active, a:visited {
   color: #ee0000;
