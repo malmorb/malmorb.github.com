@@ -67,7 +67,7 @@ configure :build do
   # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   activate :asset_host
   set :asset_host, "https://malmorb.github.io"
