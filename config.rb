@@ -70,7 +70,7 @@ configure :build do
   # activate :relative_assets
 
   activate :asset_host
-  set :asset_host, "http://malmorb.se"
+  set :asset_host, "https://malmorb.github.io"
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
