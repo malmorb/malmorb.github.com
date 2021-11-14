@@ -6,6 +6,7 @@ current_event:
   link_text: "Malmö.rb: Bruno Sutic on Async Ruby"
   location: "Skeppsbron 3, Malmö"
   url: "/events/2021/meetup-november.html"
+  signup_url: https://wtr92bnwvoc.typeform.com/to/DdFUaVrE
 ---
 
 <div class="welcome">
@@ -37,6 +38,8 @@ current_event:
           at <%= current_page.data.current_event[:location] %>, on <%= short_date current_page.data.current_event[:date] %></p>
 
           <p><%= current_page.data.current_event[:description] %></p>
+
+          <p><a href="<%= current_page.data.current_event[:signup_url] %>">Sign up!</a></p>
 
           <hr>
           <p>All events are open to all skill levels &mdash; including absolute
