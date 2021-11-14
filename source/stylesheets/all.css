@@ -30,6 +30,9 @@ h2 {
   font-size: 300%;
   text-align: center;
 }
+hr {
+  color: #eee;
+}
 
 .welcome {
   width: 100%;

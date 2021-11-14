@@ -1,11 +1,11 @@
 ---
 title: "Malmö.rb: Malmö Ruby user group"
 current_event:
-  description: "On September 5, we Explore Ruby together!"
-  date: "2019-09-05"
-  link_text: "Malmö.rb & Copenhagen.rb: a Joint Ruby Enthusiast Meetup"
-  location: "DGI Byen (Conference Room), Tietgensgade 65, 1704 København, Danmark"
-  url: "/events/2019/meetup-september.html"
+  description: "On November 23, we Explore Ruby together!"
+  date: "2021-11-23"
+  link_text: "Malmö.rb: Bruno Sutic on Async Ruby"
+  location: "Skeppsbron 3, Malmö"
+  url: "/events/2021/meetup-november.html"
 ---
 
 <div class="welcome">
@@ -29,35 +29,48 @@ current_event:
     </div>
 
     <div class="card events">
-      <h2>Our Next Meeting!</h2>
-      <div class="event-details">
+      <h2>Next event: <%= short_date current_page.data.current_event[:date] %></h2>
+      <div >
         <div class="events-upcoming">
-          <p><b>Upcoming:</b> <%= short_date current_page.data.current_event[:date] %>
+          <p><b>Upcoming:</b>
           <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
-          at <%= current_page.data.current_event[:location] %>.</p>
+          at <%= current_page.data.current_event[:location] %>, on <%= short_date current_page.data.current_event[:date] %></p>
 
           <p><%= current_page.data.current_event[:description] %></p>
 
+          <hr>
           <p>All events are open to all skill levels &mdash; including absolute
            beginners &mdash; and are free of charge.</p>
         </div>
+      </div>
 
+      <div class="event-upcoming">
         <div class="events-future">
-          <p><strong>Future</strong>: Do you want to do a talk or some other activity?
-          Get in touch, join #malmorb on <%= link_to "Øreslack", "http://oreslack.herokuapp.com" %> and the <%= link_to "mailing list", "https://groups.google.com/forum/?fromgroups#!forum/malmorb" %>!</p>
+          <p>
+            <strong>Future</strong>: Do you want to give a talk or host some other activity?
+
+            Get in touch, join #malmorb on <%= link_to "Øreslack", "http://oreslack.herokuapp.com" %>
+            and the <%= link_to "mailing list", "https://groups.google.com/g/malmorb" %>!
+          </p>
         </div>
       </div>
     </div>
 
+    <hr>
+
+    <% unless data.supporters.empty? %>
     <div class="card supporters with-fancy-links">
       <h2>Supporters</h2>
 
       <ul class="supporters-list">
       <% data.supporters.sort_by { |o| o[:name].upcase }.each do |org| %>
-        <li><a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a></li>
+        <li>
+          <a href="<%= org['url']%>" target="_blank"><%= org['name'] %></a>
+        </li>
       <% end %>
       </ul>
     </div>
+    <% end %>
 
     <div class="card using-ruby with-fancy-links">
       <h2>Ruby users</h2>
