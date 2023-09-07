@@ -30,22 +30,24 @@ current_event:
     </div>
 
     <div class="card events">
-      <h2>Next event: <%= short_date current_page.data.current_event[:date] %></h2>
-      <div >
-        <div class="events-upcoming">
-          <p><b>Upcoming:</b>
-          <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
-          at <%= current_page.data.current_event[:location] %>, on <%= short_date current_page.data.current_event[:date] %></p>
-
-          <p><%= current_page.data.current_event[:description] %></p>
-
-          <p><a href="<%= current_page.data.current_event[:signup_url] %>">Sign up!</a></p>
-
-          <hr>
-          <p>All events are open to all skill levels &mdash; including absolute
-           beginners &mdash; and are free of charge.</p>
+      <% if current_page.data.current_event %>
+        <h2>Next event: <%= short_date current_page.data.current_event[:date] %></h2>
+        <div >
+          <div class="events-upcoming">
+            <p><b>Upcoming:</b>
+            <a href="<%= current_page.data.current_event[:url] %>"><%= current_page.data.current_event[:link_text] %></a>
+            at <%= current_page.data.current_event[:location] %>, on <%= short_date current_page.data.current_event[:date] %></p>
+  
+            <p><%= current_page.data.current_event[:description] %></p>
+  
+            <p><a href="<%= current_page.data.current_event[:signup_url] %>">Sign up!</a></p>
+  
+            <hr>
+            <p>All events are open to all skill levels &mdash; including absolute
+             beginners &mdash; and are free of charge.</p>
+          </div>
         </div>
-      </div>
+      <% end %>
 
       <div class="event-upcoming">
         <div class="events-future">
