@@ -24,6 +24,7 @@ $ git commit -m 'bra sida om ninja krigare'
 
 # Skicka upp ändringen till github och publicera sidan
 $ git push origin source
+# You need the RUBYOPT=-rlogger, because Middleman 4.5.1 fails to require logger first.
 $ RUBYOPT=-rlogger bundle exec rake publish
 ```
 
