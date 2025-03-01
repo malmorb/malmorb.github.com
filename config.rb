@@ -61,8 +61,7 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
-  activate :asset_host
-  set :asset_host, "https://malmorb.github.io"
+  activate :asset_host, host: "https://malmorb.github.io"
 
   # Compress PNGs after build using middleman-smusher
   activate :smusher
