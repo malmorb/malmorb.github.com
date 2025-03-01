@@ -160,7 +160,7 @@ footer ul {
     display: grid;
     max-width: none;
     width: 100%;
-    grid-template-columns: minmax(.5em, 1fr) minmax(min-content, 70ch) minmax(.5em, 1fr);
+    grid-template-columns: minmax(.5em, 1fr) minmax(min-content, 90ch) minmax(.5em, 1fr);
     min-height: 100vh;
   }
   .welcome,
