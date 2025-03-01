@@ -24,7 +24,7 @@ $ git commit -m 'bra sida om ninja krigare'
 
 # Skicka upp ändringen till github och publicera sidan
 $ git push origin source
-$ rake publish
+$ RUBYOPT=-rlogger bundle exec rake publish
 ```
 
 Kontakt @smgt, simon@smgt.me
