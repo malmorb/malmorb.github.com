@@ -22,15 +22,7 @@
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-with_layout :events do
-  page "/events/*"
-end
-
+page "/events/*", layout: :events
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
@@ -72,9 +64,7 @@ configure :build do
   activate :asset_host
   set :asset_host, "https://malmorb.github.io"
 
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
+  # Compress PNGs after build using middleman-smusher
   activate :smusher
 
   # Or use a different image path

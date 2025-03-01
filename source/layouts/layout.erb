@@ -14,7 +14,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= data.page.title || "Malmö.rb" %></title>
+    <title><%= current_page.data.title || "Malmö.rb" %></title>
 
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>

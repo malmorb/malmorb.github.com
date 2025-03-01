@@ -7,15 +7,15 @@
 
   <article class="page event-page">
 		<h2>
-			Malmö.rb meetup on <%= data['page']['date'] %>
+			Malmö.rb meetup on <%= current_page.data.date %>
 		</h2>
 
   	<h3>
-  		<%= data['page']['theme']['name'] %>
+  		<%= current_page.data.theme.name %>
   	</h3>
 
   	<p>
-  		<%= data['page']['theme']['description'] %>
+  		<%= current_page.data.theme.description %>
   	</p>
 
 
@@ -23,13 +23,13 @@
 			Planned Activities
 		</h3>
 
-  <% if data['page']['planned_activities_description'].present? %>
+  <% if (planned_activities_description = current_page.data.planned_activities_description.presence) %>
     <p>
-      <%=  data['page']['planned_activities_description'] %>
+      <%= planned_activities_description %>
     </p>
   <% end %>
 
-	<% data['page']['speakers'].each do |speaker| %>
+	<% current_page.data.speakers.each do |speaker| %>
 	  <h4>
 	  	<%= speaker['name'] %>: <em><%= speaker['talk_title'] %></em>
 	  </h4>
@@ -40,16 +40,16 @@
   <h2>Sign up!</h2>
 
   <p>
-    <% if data['page']['signup_link'].present? %>
-      <a href="<%=  data['page']['signup_link'] %>" title="Sign up!">Sign up!</a>
+    <% if (signup_link = current_page.data['signup_link'].presence) %>
+      <a href="<%= signup_link %>" title="Sign up!">Sign up!</a>
     <% else %>
       <em>Soon there will be a link here!</em>
     <% end %>
   </p>
 
 	<h2>Facts</h2>
-  	<p>Date: <%= data['page']['date'] %></p>
-  	<p>Location: <%= data['page']['location'] %></p>
+  	<p>Date: <%= current_page.data.date %></p>
+  	<p>Location: <%= current_page.data.location %></p>
 
     <%= yield %>
   </article>
