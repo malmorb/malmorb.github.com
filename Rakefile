@@ -1,6 +1,5 @@
 desc "Publish"
 task :publish do
-
   # Delete the old build
   FileUtils.rm_r('build') if File.exist?('build')
 

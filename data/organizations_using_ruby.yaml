@@ -3,8 +3,6 @@
 #
 - name: Joint Academy / Arthro Therapeutics
   url: "https://www.jointacademy.com/"
-- name: Protetiko
-  url: "https://protetiko.com/"
 - name: Hero Gaming
   url: "https://www.herogaming.com/"
 - name: Axis
@@ -17,15 +15,13 @@
   url: "https://upptec.se/"
 - name: Foo Café
   url: "http://foocafe.org/"
-- name: Qgroup
-  url: "http://qgroup.se/"
-- name: Jayway
-  url: "https://www.jayway.com/"
+- name: Devoteam
+  url: "https://www.devoteam.com/"
 - name: Bredband2
   url: "https://www.bredband2.com/"
-- name: eCraft M3 Solutions
-  url: "http://m3.ecraft.com/"
 - name: Mokini Marketing Automation for eCommerce
   url: "https://www.mokini.com/"
 - name: Boostified
   url: "https://www.boostified.se"
+- name: Auctionet
+  url: "https://www.auctionet.com"
