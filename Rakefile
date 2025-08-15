@@ -1,8 +1,5 @@
 desc "Publish"
 task :publish do
-  unless ENV["RUBYOPT"].to_s.include?("logger")
-    abort "Oh, I could not see a Middleman bug workaround like\n\n\tRUBYOPT=-rlogger bundle exec rake publish\n\non the command line. See the README."
-  end
   # Delete the old build
   FileUtils.rm_r('build') if File.exist?('build')
 
