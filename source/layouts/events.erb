@@ -29,7 +29,7 @@
     </p>
   <% end %>
 
-	<% current_page.data.speakers.each do |speaker| %>
+	<% Array(current_page.data.speakers).each do |speaker| %>
 	  <h4>
 	  	<%= speaker['name'] %>: <em><%= speaker['talk_title'] %></em>
 	  </h4>
